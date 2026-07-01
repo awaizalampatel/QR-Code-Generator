@@ -6,29 +6,30 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #0a0a0a;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    color: #1a1a1a;
+    color: #e0e0e0;
     -webkit-font-smoothing: antialiased;
 }
 
 .container {
     max-width: 520px;
     width: 100%;
-    background: #ffffff;
+    background: #161616;
     border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    border: 1px solid #222222;
 }
 
 .header {
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     text-align: center;
     padding: 28px 24px;
     letter-spacing: 0.5px;
@@ -36,14 +37,14 @@ body {
 
 .header h1 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .header .subtitle {
     font-size: 12px;
-    color: #999999;
+    color: #888888;
     margin-top: 4px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -51,13 +52,13 @@ body {
 
 .merchant-panel {
     padding: 36px 32px;
-    background: #ffffff;
+    background: #161616;
 }
 
 .panel-title {
     font-size: 14px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffffff;
     margin-bottom: 28px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -72,38 +73,38 @@ label {
     margin-bottom: 8px;
     font-size: 13px;
     font-weight: 500;
-    color: #555555;
+    color: #888888;
     letter-spacing: 0.3px;
 }
 
 input {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #333333;
     border-radius: 8px;
     font-size: 15px;
     font-family: inherit;
-    color: #1a1a1a;
-    background: #fafafa;
+    color: #ffffff;
+    background: #1e1e1e;
     transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 input::placeholder {
-    color: #aaaaaa;
+    color: #555555;
 }
 
 input:focus {
     outline: none;
-    border-color: #000000;
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+    border-color: #ffffff;
+    background: #222222;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
 .btn-primary {
     width: 100%;
     padding: 14px 24px;
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -117,7 +118,7 @@ input:focus {
 }
 
 .btn-primary:hover {
-    background: #333333;
+    background: #e0e0e0;
 }
 
 .btn-primary:active {
@@ -127,9 +128,9 @@ input:focus {
 .btn-secondary {
     width: 100%;
     padding: 12px 24px;
-    background: #ffffff;
-    color: #1a1a1a;
-    border: 1px solid #e0e0e0;
+    background: transparent;
+    color: #e0e0e0;
+    border: 1px solid #333333;
     border-radius: 8px;
     cursor: pointer;
     font-size: 13px;
@@ -142,23 +143,23 @@ input:focus {
 }
 
 .btn-secondary:hover {
-    background: #f5f5f5;
-    border-color: #cccccc;
+    background: #222222;
+    border-color: #555555;
 }
 
 .qr-section {
     margin-top: 24px;
     padding: 28px;
-    background: #fafafa;
+    background: #1a1a1a;
     border-radius: 10px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #2a2a2a;
     text-align: center;
 }
 
 .qr-section h3 {
     font-size: 13px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
@@ -166,7 +167,7 @@ input:focus {
 
 .qr-section .qr-hint {
     font-size: 12px;
-    color: #999999;
+    color: #666666;
     margin-top: 12px;
 }
 
@@ -177,21 +178,21 @@ input:focus {
 .bill-section {
     margin-top: 24px;
     padding: 24px;
-    background: #ffffff;
+    background: #161616;
     border-radius: 10px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #2a2a2a;
 }
 
 #qrcode {
     display: block;
     margin: 16px auto;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #333333;
     border-radius: 6px;
 }
 
 .divider {
     border: none;
-    border-top: 1px dashed #e0e0e0;
+    border-top: 1px dashed #333333;
     margin: 12px 0;
 }
 
@@ -200,10 +201,10 @@ input:focus {
     max-width: 400px;
     margin: 0 auto;
     font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-    border: 1px dashed #cccccc;
+    border: 1px dashed #444444;
     border-radius: 8px;
     padding: 24px;
-    background: #ffffff;
+    background: #1a1a1a;
 }
 
 .bill-receipt .bill-header {
@@ -214,7 +215,7 @@ input:focus {
 .bill-receipt .bill-header h2 {
     font-size: 16px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #ffffff;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0;
@@ -227,7 +228,7 @@ input:focus {
     justify-content: space-between;
     padding: 6px 0;
     font-size: 13px;
-    color: #333333;
+    color: #cccccc;
 }
 
 .bill-receipt .bill-row .label {
@@ -236,18 +237,18 @@ input:focus {
 
 .bill-receipt .bill-row .value {
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
 .bill-receipt .bill-total {
     text-align: center;
     padding: 12px 0;
     margin: 12px 0;
-    border-top: 1px dashed #cccccc;
-    border-bottom: 1px dashed #cccccc;
+    border-top: 1px dashed #444444;
+    border-bottom: 1px dashed #444444;
     font-size: 18px;
     font-weight: 700;
-    color: #000000;
+    color: #ffffff;
 }
 
 .bill-receipt .bill-footer {
@@ -257,12 +258,12 @@ input:focus {
 
 .bill-receipt .bill-footer p {
     font-size: 11px;
-    color: #999999;
+    color: #666666;
     margin: 4px 0;
 }
 
 .bill-receipt canvas {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #333333;
     border-radius: 4px;
 }
 

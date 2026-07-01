@@ -50,6 +50,15 @@ body {
     text-transform: uppercase;
 }
 
+.header .credit {
+    font-size: 11px;
+    color: #999999;
+    margin-top: 10px;
+    font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
 .merchant-panel {
     padding: 36px 32px;
     background: #161616;
@@ -330,14 +339,4 @@ input:focus {
     .container {
         max-width: 520px;
     }
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px 24px;
-    font-size: 12px;
-    color: #555555;
-    letter-spacing: 0.3px;
-    border-top: 1px solid #222222;
 }

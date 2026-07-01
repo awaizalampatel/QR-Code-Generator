@@ -177,6 +177,7 @@ function generateBillReceipt(data) {
                 <canvas id="billQrcode"></canvas>
                 <p>Scan to Pay</p>
                 <p>Thank you for your business</p>
+                <p class="print-credit">Designed & Developed by Awaizalam</p>
             </div>
         </div>
     `;
@@ -195,9 +196,38 @@ function generateBillReceipt(data) {
 function printBill() {
     const billContent = document.getElementById('billContent').innerHTML;
     const printWindow = window.open('', '', 'height=600,width=800');
-    printWindow.document.write('<html><head><title>Bill Receipt</title></head><body>');
-    printWindow.document.write(billContent);
-    printWindow.document.write('</body></html>');
+    printWindow.document.write(`
+        <html>
+        <head>
+            <title>Bill Receipt</title>
+            <style>
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                body {
+                    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+                    background: #1a1a1a;
+                    color: #ffffff;
+                    padding: 20px;
+                }
+                .bill-receipt { max-width: 400px; margin: 0 auto; padding: 24px; }
+                .bill-header { text-align: center; margin-bottom: 16px; }
+                .bill-header h2 { font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+                .bill-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 13px; }
+                .bill-row .label { color: #777777; }
+                .bill-row .value { font-weight: 600; color: #ffffff; }
+                .bill-total { text-align: center; padding: 12px 0; margin: 12px 0; border-top: 1px dashed #444444; border-bottom: 1px dashed #444444; font-size: 18px; font-weight: 700; color: #ffffff; }
+                .bill-footer { text-align: center; margin-top: 16px; }
+                .bill-footer p { font-size: 11px; color: #666666; margin: 4px 0; }
+                canvas { border: 1px solid #333333; border-radius: 4px; }
+                hr.divider { border: none; border-top: 1px dashed #444444; margin: 12px 0; }
+                .print-credit { text-align: center; margin-top: 24px; font-size: 10px; color: #555555; letter-spacing: 0.3px; }
+            </style>
+        </head>
+        <body>
+            ${billContent}
+            <p class="print-credit">Designed & Developed by Awaizalam</p>
+        </body>
+        </html>
+    `);
     printWindow.document.close();
     printWindow.print();
 }
